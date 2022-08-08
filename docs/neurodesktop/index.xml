@@ -267,7 +267,8 @@ We recommend the &lt;em>manual&lt;/em> install instructions, as the simplified i
 &lt;li>updated 3D Slicer to 5.0.3 and included MONAI Label&lt;/li>
 &lt;li>added Matlab 2022a&lt;/li>
 &lt;li>updated AFNI to 22.1.14&lt;/li>
-&lt;li>updated spinal cord toolbox to 5.7&lt;/li>
+&lt;li>updated Spinal Cord Toolbox to 5.7&lt;/li>
+&lt;li>updated Oshyx to 0.4&lt;/li>
 &lt;/ul>
 &lt;h2 id="20220701">20220701&lt;/h2>
 &lt;ul>
