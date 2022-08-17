@@ -953,10 +953,11 @@ For more details, read the &amp;ldquo;Note for Mac users&amp;rdquo; &lt;a href="
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Try the following solutions (in this order, until the above command works)&lt;/p>
 &lt;ol>
 &lt;li>Win/Mac: Open docker GUI and accept T&amp;amp;Cs. Check that the docker engine is running&lt;/li>
+&lt;li>Linux: Make sure you started the docker daemon (sudo systemctl start docker)&lt;/li>
+&lt;li>Add your user to the OS docker group (sudo usermod -aG docker $USER)&lt;/li>
+&lt;li>docker.sock permissions need to be changed (sudo chown root:docker /var/run/docker.sock)&lt;/li>
 &lt;li>Close and open the terminal and retry.&lt;/li>
 &lt;li>Log out and login again, or restart the machine (current user environment doesnt fully know docker is running)&lt;/li>
-&lt;li>Add your user to the OS docker group (current user doesnt have permission to run docker)&lt;/li>
-&lt;li>docker.sock permissions need to be changed (raise a github issue &lt;a href="https://github.com/NeuroDesk/neurodesktop/issues/new/choose">here&lt;/a>)&lt;/li>
 &lt;/ol>
 &lt;h2 id="windows-users-wsl-not-installed-properly">Windows users: WSL not installed properly&lt;/h2>
 &lt;p>The Docker engine relies on the Windows subsystem for Linux (&lt;a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">WSL&lt;/a>) to run on a windows machine.&lt;/p>
