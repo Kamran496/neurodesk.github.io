@@ -615,6 +615,11 @@ Needs testing
 &lt;img src="https://user-images.githubusercontent.com/4021595/150286383-1c1b8d20-c772-4598-a81b-1ef9e11526b8.png" alt="image">&lt;/p>
 &lt;p>To launch the various applications available in Neurodesktop, follow the instructions here:
 &lt;a href="https://www.neurodesk.org/docs/neurodesktop/whats-next/#how-to-launch-applications">https://www.neurodesk.org/docs/neurodesktop/whats-next/#how-to-launch-applications&lt;/a>&lt;/p>
+&lt;p>There are a few little differences between the open-source version of Neurodesk and what&amp;rsquo;s hosted on Nectar VDI:&lt;/p>
+&lt;ol>
+&lt;li>There is no /neurodesktop-storage folder.&lt;/li>
+&lt;li>Files uploaded via drag and drop do not get stored on the desktop but in /home/vdiuser/thinclient_drives/GUACFS&lt;/li>
+&lt;/ol>
 &lt;p>Good luck!&lt;/p></description></item><item><title>Docs: Storage</title><link>https://www.neurodesk.org/docs/neurodesktop/storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.neurodesk.org/docs/neurodesktop/storage/</guid><description>
 &lt;h1 id="drag-and-drop-support">Drag and Drop support&lt;/h1>
 &lt;p>You can drag-and-drop files into the browser window to get files into the Neurodesktop. This will then start a file upload:&lt;/p>
