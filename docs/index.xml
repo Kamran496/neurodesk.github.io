@@ -1324,10 +1324,30 @@ docker&lt;/p>
 &lt;p>This notebook demonstrates how to use all Neurodesk applications in Google Colab:
 &lt;a href="https://colab.research.google.com/drive/1g5cnZxj1llRaHmOs4xSglqsXnFkQYuol?usp=sharing">https://colab.research.google.com/drive/1g5cnZxj1llRaHmOs4xSglqsXnFkQYuol?usp=sharing&lt;/a>&lt;/p>
 &lt;p>&lt;img src="https://user-images.githubusercontent.com/4021595/156729329-883d33a8-f6ae-4d79-ba71-0e1ced172069.png" alt="image">&lt;/p></description></item><item><title>Docs: Play</title><link>https://www.neurodesk.org/docs/neurodesktop/getting-started/play/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.neurodesk.org/docs/neurodesktop/getting-started/play/</guid><description>
-&lt;p>Click the link below for your own instance of Neurodesk on your browser running on Oracle cloud resources.&lt;/p>
+&lt;p>Choose the link below closest to your location for your own instance of Neurodesk on your browser running on Oracle cloud resources.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Location&lt;/th>
+&lt;th>Neurodesk Play link&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Australia East&lt;/td>
+&lt;td>&lt;a href="https://play.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop">https://play.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>US West&lt;/td>
+&lt;td>&lt;a href="https://play-phoenix.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop">https://play-phoenix.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;!--
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>&lt;a href="https://play.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop">https://play.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop&lt;/a>&lt;/p>
 &lt;/div>
+-->
 &lt;p>You can upload data to the desktop by simply drag-and-dropping files on the browser window. Data uploaded during your session are stored on Oracle Cloud, and will be automatically deleted at the end of the session. To download your files before deletion: You need to open the guacamole settings by pressing CTRL-ALT-SHIFT (Control-Command-Shift on Mac). This will open a menu on the side:&lt;/p>
 &lt;p>&lt;img src="https://user-images.githubusercontent.com/4021595/160577828-0f8ba04e-aed7-4c26-a8d2-baf6c4be317a.png" alt="{A12EDB8A-3D01-4524-A7B5-24E5E94FB418}">&lt;/p>
 &lt;p>where you can click on &amp;ldquo;Shared Drive&amp;rdquo;:&lt;/p>
