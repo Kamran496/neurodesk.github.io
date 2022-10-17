@@ -55,7 +55,7 @@ Failed to read CernVM-FS configuration&lt;/code>
 &lt;code>wget https://mirror.umd.edu/ubuntu/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2.15_amd64.deb
 dpkg -i libssl1.1_1.1.1f-1ubuntu2.15_amd64.deb&lt;/code>
 &lt;/pre>
-&lt;h1 id="install-singularityapptainer">install singularity/apptainer&lt;/h1>
+&lt;h1 id="install-singularityapptainer">Install singularity/apptainer&lt;/h1>
 &lt;p>e.g. for Ubuntu/Debian:&lt;/p>
 &lt;pre class="language-batch command-line" data-prompt=">">
 &lt;code>export VERSION=1.18.3 OS=linux ARCH=amd64 &amp;&amp; \
@@ -82,7 +82,7 @@ make -C ./builddir &amp;&amp; \
 sudo make -C ./builddir install
 export PATH="/usr/local/singularity/bin:${PATH}"&lt;/code>
 &lt;/pre>
-&lt;h1 id="use-of-neurodesk-cvmfs-containers">use of Neurodesk CVMFS containers&lt;/h1>
+&lt;h1 id="use-of-neurodesk-cvmfs-containers">Use of Neurodesk CVMFS containers&lt;/h1>
 &lt;p>The containers are now available in /cvmfs/neurodesk.ardc.edu.au/containers/ and can be started with:&lt;/p>
 &lt;pre class="language-batch command-line" data-prompt=">">
 &lt;code>singularity shell /cvmfs/neurodesk.ardc.edu.au/containers/itksnap_3.8.0_20201208/itksnap_3.8.0_20201208.simg&lt;/code>
@@ -91,7 +91,8 @@ export PATH="/usr/local/singularity/bin:${PATH}"&lt;/code>
 &lt;pre class="language-batch command-line" data-prompt=">">
 &lt;code>export SINGULARITY_BINDPATH='/cvmfs,/mnt,/home'&lt;/code>
 &lt;/pre>
-&lt;h1 id="wsl-doesnt-support-homedirectory---so-dont-mount-this">WSL doesn&amp;rsquo;t support homedirectory - so don&amp;rsquo;t mount this&lt;/h1>
+&lt;h2 id="for-wsl-users">For WSL users&lt;/h2>
+&lt;p>The homedirectory might not be supported. Avoid mounting it with&lt;/p>
 &lt;pre class="language-batch command-line" data-prompt=">">
 &lt;code>singularity shell --no-home /cvmfs/neurodesk.ardc.edu.au/containers/itksnap_3.8.0_20201208/itksnap_3.8.0_20201208.simg&lt;/code>
 &lt;/pre>
@@ -103,12 +104,17 @@ export PATH="/usr/local/singularity/bin:${PATH}"&lt;/code>
 &lt;pre class="language-batch command-line" data-prompt=">">
 &lt;code>mount home = no&lt;/code>
 &lt;/pre>
-&lt;h1 id="install-module-system">install module system:&lt;/h1>
+&lt;h1 id="install-module-system">Install module system&lt;/h1>
 &lt;pre class="language-batch command-line" data-prompt=">">
 &lt;code>sudo yum install lmod&lt;/code>
 &lt;/pre>
-&lt;h1 id="configure-module-system">configure module system:&lt;/h1>
-&lt;p>content of /usr/share/module.sh :&lt;/p>
+&lt;p>or&lt;/p>
+&lt;pre class="language-batch command-line" data-prompt=">">
+&lt;code>sudo apt install lmod&lt;/code>
+&lt;/pre>
+&lt;h1 id="use-of-containers-in-the-module-system">Use of containers in the module system&lt;/h1>
+&lt;h2 id="configuration-for-module-system">Configuration for module system&lt;/h2>
+&lt;p>Create a the new file &lt;code>/usr/share/module.sh&lt;/code> with the content:&lt;/p>
 &lt;pre class="language-batch command-line" data-prompt=">">
 &lt;code># system-wide profile.modules #
 # Initialize modules for all sh-derivative shells #
@@ -123,8 +129,8 @@ case "$0" in
 esac
 trap - 1 2 3&lt;/code>
 &lt;/pre>
-&lt;h1 id="use-of-containers-in-the-module-system">use of containers in the module system:&lt;/h1>
-&lt;p>add this to .bashrc:&lt;/p>
+&lt;h2 id="make-the-module-system-usable-in-the-shell">Make the module system usable in the shell&lt;/h2>
+&lt;p>Add the following lines to your &lt;code>~/.bashrc&lt;/code> file:&lt;/p>
 &lt;pre class="language-batch command-line" data-prompt=">">
 &lt;code>if [ -f '/usr/share/module.sh' ]; then source /usr/share/module.sh; fi
 if [ -d /cvmfs/neurodesk.ardc.edu.au/neurodesk-modules ]; then
@@ -144,7 +150,11 @@ fi
 fi
 fi&lt;/code>
 &lt;/pre>
-&lt;h1 id="use-of-containers-in-the-module-system-1">use of containers in the module system:&lt;/h1>
+&lt;p>Restart the current shell or run&lt;/p>
+&lt;pre class="language-batch command-line" data-prompt=">">
+&lt;code>source ~/.bashrc&lt;/code>
+&lt;/pre>
+&lt;h1 id="use-of-containers-in-the-module-system-1">Use of containers in the module system&lt;/h1>
 &lt;pre class="language-batch command-line" data-prompt=">">
 &lt;code>export SINGULARITY_BINDPATH='/cvmfs,/mnt,/home'
 module use /cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/*
@@ -222,12 +232,15 @@ export SINGULARITY_BINDPATH='/cvmfs,/mnt,/home'&lt;/code>
 &lt;p>Follow the instructions here: &lt;a href="https://www.neurodesk.org/docs/neurocontainers/cvmfs/">https://www.neurodesk.org/docs/neurocontainers/cvmfs/&lt;/a>&lt;/p>
 &lt;h3 id="lmod">LMOD&lt;/h3>
 &lt;pre class="language-batch command-line" data-prompt=">">
-&lt;code>apt install lmod&lt;/code>
+&lt;code>sudo apt install lmod&lt;/code>
 &lt;/pre>
 &lt;h2 id="3-use-neurodesk-containers">3. Use Neurodesk containers&lt;/h2>
 &lt;pre class="language-batch command-line" data-prompt=">">
 &lt;code>module use /cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/*
-ml av
 ml fsl
 fsleyes&lt;/code>
+&lt;/pre>
+&lt;p>List the available programs:&lt;/p>
+&lt;pre class="language-batch command-line" data-prompt=">">
+&lt;code>ml av&lt;/code>
 &lt;/pre></description></item></channel></rss>
