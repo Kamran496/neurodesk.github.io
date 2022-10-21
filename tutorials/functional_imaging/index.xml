@@ -367,6 +367,7 @@ Our version here is a shortened and adjusted version for using on the Neurodesk 
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>gunzip sub-08/anat/sub-08_T1w.nii.gz -f
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>gunzip sub-08/func/sub-08_task-flanker_run-1_bold.nii.gz -f
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>gunzip sub-08/func/sub-08_task-flanker_run-2_bold.nii.gz -f
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chmod a+rw sub-08/ -R
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The task used is described here: &lt;a href="https://andysbrainbook.readthedocs.io/en/latest/SPM/SPM_Short_Course/SPM_02_Flanker.html">https://andysbrainbook.readthedocs.io/en/latest/SPM/SPM_Short_Course/SPM_02_Flanker.html&lt;/a>&lt;/p>
 &lt;h2 id="starting-spm-and-visualizing-the-data">Starting SPM and visualizing the data&lt;/h2>
 &lt;p>Start spm12GUI from the Application Menu:
@@ -392,4 +393,6 @@ Our version here is a shortened and adjusted version for using on the Neurodesk 
 &lt;img width="416" alt="image" src="https://user-images.githubusercontent.com/4021595/197103347-315f6f03-cd67-4c2d-8e2c-f5d18ee10888.png">&lt;/p>
 &lt;p>Then select the functional run (important: Select frames from 1:146 again!) and leave everything else as Defaults. Then hit run:
 &lt;img width="702" alt="image" src="https://user-images.githubusercontent.com/4021595/197103705-47d0d4cf-10e2-4db1-b4b7-ffda1b49ad47.png">&lt;/p>
+&lt;p>As an output we should see the realignment parameters:
+&lt;img width="623" alt="image" src="https://user-images.githubusercontent.com/4021595/197106717-0850bb27-cb72-48b1-a532-90910e3267d4.png">&lt;/p>
 &lt;h2 id="analyzing-the-data">Analyzing the data&lt;/h2></description></item></channel></rss>
