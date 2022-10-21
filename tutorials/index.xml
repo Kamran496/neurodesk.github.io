@@ -831,6 +831,34 @@ Twitter: &lt;a href="https://twitter.com/sbollmann_MRI">@sbollmann_MRI&lt;/a>&lt
 &lt;p>This tutorial is based on the excellent tutorial from Andy&amp;rsquo;s Brain book: &lt;a href="https://andysbrainbook.readthedocs.io/en/latest/SPM/SPM_Overview.html">https://andysbrainbook.readthedocs.io/en/latest/SPM/SPM_Overview.html&lt;/a>
 Our version here is a shortened and adjusted version for using on the Neurodesk platform.&lt;/p>
 &lt;h2 id="download-data">Download data&lt;/h2>
+&lt;p>First, let&amp;rsquo;s download the data. We will use this open dataset: &lt;a href="https://openneuro.org/datasets/ds000102/versions/00001/download">https://openneuro.org/datasets/ds000102/versions/00001/download&lt;/a>&lt;/p>
+&lt;p>Open a terminal and use datalad to install the dataset:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>cd neurodesktop-storage
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>datalad install https://github.com/OpenNeuroDatasets/ds000102.git
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;img width="839" alt="image" src="https://user-images.githubusercontent.com/4021595/197097444-900ad262-fbca-4cac-adea-3c7b67a4ecc5.png">
+&lt;p>We will use subject 08 as an example here, so we use datalad to download sub-08 and since SPM doesn&amp;rsquo;t support compressed files, we need to unpack them:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>cd ds000102
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>datalad get sub-08/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>gunzip sub-08/anat/sub-08_T1w.nii.gz -f
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>gunzip sub-08/func/sub-08_task-flanker_run-1_bold.nii.gz -f
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>gunzip sub-08/func/sub-08_task-flanker_run-2_bold.nii.gz -f
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The task used is described here: &lt;a href="https://andysbrainbook.readthedocs.io/en/latest/SPM/SPM_Short_Course/SPM_02_Flanker.html">https://andysbrainbook.readthedocs.io/en/latest/SPM/SPM_Short_Course/SPM_02_Flanker.html&lt;/a>&lt;/p>
+&lt;h2 id="starting-spm-and-visualizing-the-data">Starting SPM and visualizing the data&lt;/h2>
+&lt;p>Start spm12GUI from the Application Menu:
+&lt;img width="727" alt="image" src="https://user-images.githubusercontent.com/4021595/197098330-3c6611a1-8bbb-49da-b6fb-3752452322cc.png">&lt;/p>
+&lt;p>When the SPM menu loaded, click on fMRI and the full SPM interface should open up:
+&lt;img width="1039" alt="image" src="https://user-images.githubusercontent.com/4021595/197098528-aba8f46c-d837-4de5-80c5-07056b784c46.png">&lt;/p>
+&lt;p>For convenience let&amp;rsquo;s change our default directory to our example subject. Click on &lt;code>Utils&lt;/code> and select &lt;code>CD&lt;/code>:
+&lt;img width="404" alt="image" src="https://user-images.githubusercontent.com/4021595/197101928-1bdf67a4-8945-43aa-8df3-877af03bf677.png">&lt;/p>
+&lt;p>Then navigate to sub-08 and select the directory in the right browser window:
+&lt;img width="508" alt="image" src="https://user-images.githubusercontent.com/4021595/197102015-2f646e54-0626-4139-b9ac-2ad2a77a2ab6.png">&lt;/p>
+&lt;p>Now let&amp;rsquo;s visualize the anatomical T1 scan of subject 08 by clicking on Display and navigating and selecting the anatomical scan:
+&lt;img width="743" alt="image" src="https://user-images.githubusercontent.com/4021595/197100690-b8e7a0b8-6c0b-47fc-8c5f-46f317396361.png">&lt;/p>
+&lt;img width="1041" alt="image" src="https://user-images.githubusercontent.com/4021595/197100737-02fdc59e-94df-4895-b756-fc78e5365cfd.png">
+&lt;p>Now let&amp;rsquo;s look at the functional scans. Use CheckReg and open run-01. Then right click and &lt;code>Browse ...&lt;/code>. Then set frames to 1:146 and right click &lt;code>Select All&lt;/code>&lt;/p>
+&lt;img width="506" alt="image" src="https://user-images.githubusercontent.com/4021595/197101637-dc486f27-083a-4849-a5af-34666a21e7a4.png">
+&lt;p>Now we get a slider viewer and we can investigate all functional scans:
+&lt;img width="609" alt="image" src="https://user-images.githubusercontent.com/4021595/197102121-07f1b9c1-3222-4c7c-ad03-eb41e1294460.png">&lt;/p>
 &lt;h2 id="preprocessing-the-data">Preprocessing the data&lt;/h2>
 &lt;h2 id="analyzing-the-data">Analyzing the data&lt;/h2></description></item><item><title>Tutorials: Structural connectivity dMRI</title><link>https://www.neurodesk.org/tutorials/structural_imaging/structuralconnectivity/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.neurodesk.org/tutorials/structural_imaging/structuralconnectivity/</guid><description>
 &lt;blockquote>
