@@ -820,7 +820,19 @@ Twitter: &lt;a href="https://twitter.com/sbollmann_MRI">@sbollmann_MRI&lt;/a>&lt
 &lt;p>&lt;img src="https://user-images.githubusercontent.com/4021595/155106388-72a691a4-c0a4-4cc6-a2ac-c9271888b82d.png" alt="image">&lt;/p>
 &lt;blockquote>
 &lt;p>Please note that the demo dataset does not have a T1w scan for anatomical segmentation and therefore the subsequent steps in QSMxT (e.g. &lt;code>python3 /opt/QSMxT/run_3_segment.py 01_bids 03_segmentation&lt;/code>) will NOT work.&lt;/p>
-&lt;/blockquote></description></item><item><title>Tutorials: Structural connectivity dMRI</title><link>https://www.neurodesk.org/tutorials/structural_imaging/structuralconnectivity/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.neurodesk.org/tutorials/structural_imaging/structuralconnectivity/</guid><description>
+&lt;/blockquote></description></item><item><title>Tutorials: Statistical Parametric Mapping (SPM)</title><link>https://www.neurodesk.org/tutorials/functional_imaging/spm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.neurodesk.org/tutorials/functional_imaging/spm/</guid><description>
+&lt;blockquote>
+&lt;p>&lt;em>This tutorial was created by Steffen Bollmann.&lt;/em>&lt;/p>
+&lt;p>Email: &lt;a href="mailto:s.bollmannn@uq.edu.au">s.bollmannn@uq.edu.au&lt;/a>&lt;/p>
+&lt;p>Github: @stebo85&lt;/p>
+&lt;p>Twitter: @sbollmann_MRI&lt;/p>
+&lt;/blockquote>
+&lt;!-- Fill in your personal details above so that we can credit the tutorial to you. Feel free to add any additional contact details i.e. website, or remove those that are irrelevant -->
+&lt;p>This tutorial is based on the excellent tutorial from Andy&amp;rsquo;s Brain book: &lt;a href="https://andysbrainbook.readthedocs.io/en/latest/SPM/SPM_Overview.html">https://andysbrainbook.readthedocs.io/en/latest/SPM/SPM_Overview.html&lt;/a>
+Our version here is a shortened and adjusted version for using on the Neurodesk platform.&lt;/p>
+&lt;h2 id="download-data">Download data&lt;/h2>
+&lt;h2 id="preprocessing-the-data">Preprocessing the data&lt;/h2>
+&lt;h2 id="analyzing-the-data">Analyzing the data&lt;/h2></description></item><item><title>Tutorials: Structural connectivity dMRI</title><link>https://www.neurodesk.org/tutorials/structural_imaging/structuralconnectivity/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.neurodesk.org/tutorials/structural_imaging/structuralconnectivity/</guid><description>
 &lt;blockquote>
 &lt;p>&lt;em>This tutorial was created by Joan Amos.&lt;/em>&lt;/p>
 &lt;p>Email: &lt;a href="mailto:joan@std.uestc.edu.cn">joan@std.uestc.edu.cn&lt;/a>

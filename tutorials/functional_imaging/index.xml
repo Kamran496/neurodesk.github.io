@@ -345,4 +345,16 @@ using a CMRR multi-band sequence, I used &lt;a href="https://github.com/CMRR-C2P
 &lt;p>&lt;img src="https://www.neurodesk.org/PhysIO_Batch/PhysIOBatch2.png" alt="PhysIOBatch2" title="PhysIOBatch2"> &amp;lt;!&amp;ndash; &lt;img src="https://www.neurodesk.org/subfolder_name/filename.png" alt="filename without extension" title="[filename without extension"> &amp;ndash;&amp;gt;&lt;/p>
 &lt;p>Now to run your PhysIO batch script, type the command:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>run_spm12.sh /opt/mcr/v99/ batch /your/batch/scipt/named_something.m
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Et Voila! Physiological regressors are now yours - mua ha ha!&lt;/p></description></item></channel></rss>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Et Voila! Physiological regressors are now yours - mua ha ha!&lt;/p></description></item><item><title>Tutorials: Statistical Parametric Mapping (SPM)</title><link>https://www.neurodesk.org/tutorials/functional_imaging/spm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.neurodesk.org/tutorials/functional_imaging/spm/</guid><description>
+&lt;blockquote>
+&lt;p>&lt;em>This tutorial was created by Steffen Bollmann.&lt;/em>&lt;/p>
+&lt;p>Email: &lt;a href="mailto:s.bollmannn@uq.edu.au">s.bollmannn@uq.edu.au&lt;/a>&lt;/p>
+&lt;p>Github: @stebo85&lt;/p>
+&lt;p>Twitter: @sbollmann_MRI&lt;/p>
+&lt;/blockquote>
+&lt;!-- Fill in your personal details above so that we can credit the tutorial to you. Feel free to add any additional contact details i.e. website, or remove those that are irrelevant -->
+&lt;p>This tutorial is based on the excellent tutorial from Andy&amp;rsquo;s Brain book: &lt;a href="https://andysbrainbook.readthedocs.io/en/latest/SPM/SPM_Overview.html">https://andysbrainbook.readthedocs.io/en/latest/SPM/SPM_Overview.html&lt;/a>
+Our version here is a shortened and adjusted version for using on the Neurodesk platform.&lt;/p>
+&lt;h2 id="download-data">Download data&lt;/h2>
+&lt;h2 id="preprocessing-the-data">Preprocessing the data&lt;/h2>
+&lt;h2 id="analyzing-the-data">Analyzing the data&lt;/h2></description></item></channel></rss>
