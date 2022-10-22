@@ -915,7 +915,50 @@ Our version here is a shortened and adjusted version for using on the Neurodesk 
 &lt;p>Then click Play.&lt;/p>
 &lt;p>You can check the smoothing by using CheckReg again:
 &lt;img width="624" alt="image" src="https://user-images.githubusercontent.com/4021595/197306424-8c407cd5-7ba9-4ae3-83ee-4fa8ec22e41f.png">&lt;/p>
-&lt;h2 id="analyzing-the-data">Analyzing the data&lt;/h2></description></item><item><title>Tutorials: Structural connectivity dMRI</title><link>https://www.neurodesk.org/tutorials/structural_imaging/structuralconnectivity/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.neurodesk.org/tutorials/structural_imaging/structuralconnectivity/</guid><description>
+&lt;h2 id="analyzing-the-data">Analyzing the data&lt;/h2>
+&lt;p>Click on &lt;code>Specify 1st-level&lt;/code> - then set the following options:&lt;/p>
+&lt;ul>
+&lt;li>Directory: Select the sub-08 top level directory&lt;/li>
+&lt;li>Units for desing: Seconds&lt;/li>
+&lt;li>Interscan interval: 2&lt;/li>
+&lt;li>Data &amp;amp; Design: Click twice on New Subject/Session&lt;/li>
+&lt;li>Select the smoothed, warped data from run 1 and run 2 for the two sessions respectively&lt;/li>
+&lt;li>Create two Conditions per run and set the following:&lt;/li>
+&lt;li>For Run 1:&lt;/li>
+&lt;li>Name: Inc&lt;/li>
+&lt;li>Onsets (you can copy from here and paste with CTRL-V): 0 10 20 52 88 130 144 174 236 248 260 274&lt;/li>
+&lt;li>Durations: 2 (SPM will assume that it&amp;rsquo;s the same for each event)&lt;/li>
+&lt;li>Name: Con&lt;/li>
+&lt;li>Onsets: 32 42 64 76 102 116 154 164 184 196 208 222&lt;/li>
+&lt;li>Durations: 2&lt;/li>
+&lt;li>For Run 2:&lt;/li>
+&lt;li>Name: Inc&lt;/li>
+&lt;li>Onsets: 0 10 52 64 88 150 164 174 184 196 232 260&lt;/li>
+&lt;li>Durations: 2&lt;/li>
+&lt;li>Name: Con&lt;/li>
+&lt;li>Onsets: 20 30 40 76 102 116 130 140 208 220 246 274&lt;/li>
+&lt;li>Durations: 2&lt;/li>
+&lt;/ul>
+&lt;p>When done, click the green Play button.&lt;/p>
+&lt;p>We can Review the design by clicking on &lt;code>Review&lt;/code> in the SPM menu and selecting the SPM.mat file in the model directory we specified earlier and it should look like this:
+&lt;img width="626" alt="image" src="https://user-images.githubusercontent.com/4021595/197309811-da1fb6d2-1eb3-4ed8-9fe7-560292b645a4.png">&lt;/p>
+&lt;h3 id="estimating-the-model">Estimating the model&lt;/h3>
+&lt;p>Click on &lt;code>Estimate&lt;/code> in the SPM menu and select the SPM.mat file, then hit the green Play button.&lt;/p>
+&lt;h3 id="inference">Inference&lt;/h3>
+&lt;p>Now open the &lt;code>Results&lt;/code> section and select the SPM.mat file again. Then we can test our hypotheses:&lt;/p>
+&lt;p>Define a new contrast as:&lt;/p>
+&lt;ul>
+&lt;li>Name: Incongruent-Congruent&lt;/li>
+&lt;li>Contrast weights vector: 0.5 -0.5 0.5 -0.5&lt;/li>
+&lt;/ul>
+&lt;img width="518" alt="image" src="https://user-images.githubusercontent.com/4021595/197309988-5f09952a-fc3d-4a8b-9797-22dbdd165e12.png">
+&lt;p>Then we can view the results. Set the following options:&lt;/p>
+&lt;ul>
+&lt;li>masking: none”&lt;/li>
+&lt;li>p value adjustment to control: Click on “none”, and set the uncorrected p-value to 0.01.&lt;/li>
+&lt;li>extent threshold {voxels}: 10&lt;/li>
+&lt;/ul>
+&lt;img width="622" alt="image" src="https://user-images.githubusercontent.com/4021595/197310053-cde3d7cb-9af1-4a5b-8923-6c26b7b2a5ee.png"></description></item><item><title>Tutorials: Structural connectivity dMRI</title><link>https://www.neurodesk.org/tutorials/structural_imaging/structuralconnectivity/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.neurodesk.org/tutorials/structural_imaging/structuralconnectivity/</guid><description>
 &lt;blockquote>
 &lt;p>&lt;em>This tutorial was created by Joan Amos.&lt;/em>&lt;/p>
 &lt;p>Email: &lt;a href="mailto:joan@std.uestc.edu.cn">joan@std.uestc.edu.cn&lt;/a>
