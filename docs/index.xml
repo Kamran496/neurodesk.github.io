@@ -1189,16 +1189,22 @@ echo 'CVMFS_SERVER_URL="http://cvmfs.neurodesk.org/cvmfs/@fqrn@;http://cvmfs-bri
 echo 'CVMFS_KEYS_DIR="/etc/cvmfs/keys/ardc.edu.au/"' | sudo tee -a /etc/cvmfs/config.d/neurodesk.ardc.edu.au.conf
 echo "CVMFS_HTTP_PROXY=DIRECT" | sudo tee /etc/cvmfs/default.local
 echo "CVMFS_QUOTA_LIMIT=5000" | sudo tee -a /etc/cvmfs/default.local
-sudo cvmfs_config setup
-# this is only necessary for WSL:
-sudo cvmfs_config wsl2_start
-sudo cvmfs_config chksetup
+sudo cvmfs_config setup&lt;/code>
+&lt;/pre>
+&lt;h2 id="for-wsl-users">For WSL users&lt;/h2>
+&lt;p>It is required to run this for each new new WSL session:&lt;/p>
+&lt;pre class="language-batch command-line" data-prompt=">">
+&lt;code>sudo cvmfs_config wsl2_start&lt;/code>
+&lt;/pre>
+&lt;p>Test if the connection works:&lt;/p>
+&lt;pre class="language-batch command-line" data-prompt=">">
+&lt;code>sudo cvmfs_config chksetup
 ls /cvmfs/neurodesk.ardc.edu.au
 sudo cvmfs_talk -i neurodesk.ardc.edu.au host probe
 sudo cvmfs_talk -i neurodesk.ardc.edu.au host info
 cvmfs_config stat -v neurodesk.ardc.edu.au&lt;/code>
 &lt;/pre>
-&lt;h1 id="for-ubuntu-2204-users">For Ubuntu 22.04 users&lt;/h1>
+&lt;h2 id="for-ubuntu-2204-users">For Ubuntu 22.04 users&lt;/h2>
 &lt;p>If configuring CVMFS returns the following error:&lt;/p>
 &lt;pre class="language-batch command-line" data-prompt=">">
 &lt;code>Error: failed to load cvmfs library, tried: './libcvmfs_fuse3_stub.so' '/usr/lib/libcvmfs_fuse3_stub.so' '/usr/lib64/libcvmfs_fuse3_stub.so' './libcvmfs_fuse_stub.so' '/usr/lib/libcvmfs_fuse_stub.so' '/usr/lib64/libcvmfs_fuse_stub.so'
@@ -1251,7 +1257,7 @@ export PATH="/usr/local/singularity/bin:${PATH}"&lt;/code>
 &lt;pre class="language-batch command-line" data-prompt=">">
 &lt;code>export SINGULARITY_BINDPATH='/cvmfs,/mnt,/home'&lt;/code>
 &lt;/pre>
-&lt;h2 id="for-wsl-users">For WSL users&lt;/h2>
+&lt;h2 id="for-wsl-users-1">For WSL users&lt;/h2>
 &lt;p>The homedirectory might not be supported. Avoid mounting it with&lt;/p>
 &lt;pre class="language-batch command-line" data-prompt=">">
 &lt;code>singularity shell --no-home /cvmfs/neurodesk.ardc.edu.au/containers/itksnap_3.8.0_20201208/itksnap_3.8.0_20201208.simg&lt;/code>
@@ -1434,9 +1440,21 @@ export SINGULARITY_BINDPATH='/cvmfs,/mnt,/home'&lt;/code>
 &lt;code>sudo apt install lmod&lt;/code>
 &lt;/pre>
 &lt;h2 id="3-use-neurodesk-containers">3. Use Neurodesk containers&lt;/h2>
+&lt;p>
+&lt;div class="alert alert-primary" role="alert">
+&lt;p>When restarting WSL the cvmfs service has to be started manually:&lt;/p>
 &lt;pre class="language-batch command-line" data-prompt=">">
-&lt;code>module use /cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/*
-ml fsl
+&lt;code>sudo cvmfs_config wsl2_start&lt;/code>
+&lt;/pre>
+&lt;/div>
+&lt;br>
+Initialize the neurodesk modules:&lt;/p>
+&lt;pre class="language-batch command-line" data-prompt=">">
+&lt;code>module use /cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/*&lt;/code>
+&lt;/pre>
+&lt;p>Example usage of fsleyes:&lt;/p>
+&lt;pre class="language-batch command-line" data-prompt=">">
+&lt;code>ml fsl
 fsleyes&lt;/code>
 &lt;/pre>
 &lt;p>List the available programs:&lt;/p>
