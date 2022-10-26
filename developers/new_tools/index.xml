@@ -537,7 +537,7 @@ This should be launched by &amp;lsquo;python -m pip&amp;rsquo;&lt;/li>
 &lt;li>(optional) Sync upstream repository:&lt;br>
 If you have the permissions to do so: Press &amp;ldquo;Fetch upstream&amp;rdquo; in &lt;a href="https://github.com/NeuroDesk/neurodocker">https://github.com/NeuroDesk/neurodocker&lt;/a> to check if our fork of Neurodocker is already up-to-date. Otherwise, open an issue in &lt;a href="https://github.com/NeuroDesk/neurocontainers/issues">https://github.com/NeuroDesk/neurocontainers/issues&lt;/a>, requesting to pull-in latest changes from Neurodocker upstream into our fork of Neurodocker. One of the admins will attend the issue and perform the operation.&lt;/li>
 &lt;li>(optional) Add a new neurodocker tool:&lt;br>
-If relevant to your project, add an option to neurodocker that installs new software (&lt;a href="https://github.com/NeuroDesk/neurodocker">https://github.com/NeuroDesk/neurodocker&lt;/a>) and create a pull request to neurodocker&amp;rsquo;s main responsitory (add new tool in a branch!).&lt;/li>
+If relevant to your project, add an option to neurodocker that installs new software (&lt;a href="https://github.com/NeuroDesk/neurodocker">https://github.com/NeuroDesk/neurodocker&lt;/a>) and create a pull request to neurodocker&amp;rsquo;s main respository (add new tool in a branch!).&lt;/li>
 &lt;li>Clone our fork of Neurodocker:
 &lt;pre class="language-shell command-line" data-prompt="$">&lt;code>git clone https://github.com/NeuroDesk/neurodocker/&lt;/code>&lt;/pre>
 &lt;/li>
@@ -546,8 +546,11 @@ If relevant to your project, add an option to neurodocker that installs new soft
 python -m pip install .
 cd ..&lt;/code>&lt;/pre>
 &lt;/li>
-&lt;li>Run:
-echo &amp;rsquo;export PATH=${PATH}:${HOME}/.local/bin&amp;rsquo; &amp;raquo; ${HOME}/.bashrc&lt;/li>
+&lt;li>Append line to .bashrc for adding the path:
+&lt;pre class="language-shell command-line" data-prompt="$">
+&lt;code>echo 'export PATH=${PATH}:${HOME}/.local/bin' >> ${HOME}/.bashrc&lt;/code>
+&lt;/pre>
+&lt;/li>
 &lt;li>Close the terminal, and reopen it for the updated PATH to take effect&lt;/li>
 &lt;/ol>
 &lt;h3 id="clone-the-neurocontainers-repository">Clone the Neurocontainers repository&lt;/h3>
