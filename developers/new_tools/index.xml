@@ -580,15 +580,38 @@ Modify &lt;code>build.sh&lt;/code> in &lt;code>neurocontainers/recipes/NEWAPP&lt
 &lt;p>Upload your application to object storage first if needed, so you can then download it in &lt;code>build.sh&lt;/code> (ask for instructions about this if you don&amp;rsquo;t know the key, and never share it anywhere public!)&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Run &lt;code>update-builders.sh&lt;/code>:
-This will auto-create the CI workflow for the application (or manually duplicate the template file and rename all occurances of template to NEWAPP)&lt;/p>
-&lt;pre class="language-shell command-line" data-prompt="$">&lt;code>cd ../..
-sh update-builders.sh&lt;/code>&lt;/pre>
-&lt;div class="alert alert-primary" role="alert">
-If the CI build runs out of space, add the application to the following txt file to add additional space:
-&lt;a href="https://github.com/NeuroDesk/neurocontainers/blob/master/.github/workflows/free-up-space-list.txt">https://github.com/NeuroDesk/neurocontainers/blob/master/.github/workflows/free-up-space-list.txt&lt;/a>.
-Note: this increases CI run time, only use in cases of out-of-space errors.
+&lt;p>Building containers&lt;/p>
+&lt;p>Any NEWAPP under the &lt;code>recipes/&lt;/code> directory are built and pushed automatically via github actions&lt;/p>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">Depreciation notice&lt;/h4>
+&lt;p>&lt;code>./update-builder.sh&lt;/code> and &lt;code>.github/workflows/free-up-space-list.txt&lt;/code> are now deprecated. Files are now placeholders and will be removed in a future update.&lt;/p>
+&lt;ul>
+&lt;li>Container building is now automated for any folder under &lt;code>recipes/&lt;/code>. To override, use &lt;code>autoBuild: false&lt;/code> in &lt;code>build-config.json&lt;/code> (see below)&lt;/li>
+&lt;li>For free-up-space process, use &lt;code>freeUpSpace: true&lt;/code> in &lt;code>build-config.json&lt;/code> (see below)&lt;/li>
+&lt;/ul>
 &lt;/div>
+&lt;p>Apps are built using the following settings:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>autoBuild: true&lt;/code>&lt;/li>
+&lt;li>&lt;code>freeUpSpace: false&lt;/code>&lt;/li>
+&lt;li>&lt;code>selfHostedRunner: false&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>This default behaviour can be overriden on an app-by-app bases using entries in &lt;code>.github/workflows/build-config.json&lt;/code>&lt;/p>
+&lt;p>For example:&lt;/p>
+&lt;pre class="language-json">
+&lt;code>{
+"template": {
+"autoBuild": true,
+"freeUpSpace": false,
+"selfHostedRunner": false
+},
+"newapp": {
+"autoBuild": false,
+"freeUpSpace": true,
+"selfHostedRunner": false
+},
+}&lt;/code>
+&lt;/pre>
 &lt;/li>
 &lt;li>
 &lt;p>Build and test the container locally&lt;/p>
