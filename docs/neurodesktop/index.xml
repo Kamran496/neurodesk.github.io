@@ -271,6 +271,7 @@ We recommend the &lt;em>manual&lt;/em> install instructions, as the simplified i
 &lt;li>added new CVMFS mirror server in Phoenix&lt;/li>
 &lt;li>added mimilist types so that nii/minc files now open in the respective applications&lt;/li>
 &lt;li>matlab licenses can now be saved from the activation GUI&lt;/li>
+&lt;li>keyboard layout fix for ALTGR key on European keyboards&lt;/li>
 &lt;/ul>
 &lt;h2 id="20220813">20220813&lt;/h2>
 &lt;ul>
