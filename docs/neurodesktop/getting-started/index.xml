@@ -436,7 +436,7 @@ If you want to connect via RDP using a different port, replace 3390 in the previ
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="using-vnc">Using VNC&lt;/h2>
 &lt;p>To enable VNC and disable RDP, startup Neurodesktop using the following command:&lt;/p>
 &lt;pre class="language-batch command-line" data-prompt=">">
-&lt;code>docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -e VNC_ENABLE=true -p 8080:8080 -h neurodesktop-20220813 vnmd/neurodesktop:20220813&lt;/code>
+&lt;code>docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8080:8080 -h neurodesktop-20220813 vnmd/neurodesktop:20220813 --vnc &lt;/code>
 &lt;/pre>
 &lt;div class="alert alert-primary" role="alert">
 &lt;p>VNC allows for multiple desktop connections to same instance&lt;/p>
@@ -448,7 +448,7 @@ Needs testing
 &lt;/div>
 &lt;p>Startup Neurodesktop using the following command:&lt;/p>
 &lt;pre class="language-batch command-line" data-prompt=">">
-&lt;code>docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -e VNC_ENABLE=true -p 5901:5901 -p 8080:8080 -h neurodesktop-20220813 vnmd/neurodesktop:20220813&lt;/code>
+&lt;code>docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 5901:5901 -p 8080:8080 -h neurodesktop-20220813 vnmd/neurodesktop:20220813 --vnc &lt;/code>
 &lt;/pre>
 &lt;p>Open a VNC Client and connect to port 5901&lt;/p></description></item><item><title>Docs: HPC</title><link>https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/</guid><description>
 &lt;p>One way of running this project on HPCs is via &lt;a href="https://www.neurodesk.org/docs/neurocommand/getting-started/linux/">https://www.neurodesk.org/docs/neurocommand/getting-started/linux/&lt;/a>&lt;/p></description></item><item><title>Docs: Nectar Virtual Desktop Service</title><link>https://www.neurodesk.org/docs/neurodesktop/getting-started/nectar/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.neurodesk.org/docs/neurodesktop/getting-started/nectar/</guid><description>
