@@ -275,7 +275,12 @@ Needs testing
 -e HOST_UID=&amp;#34;$(id -u)&amp;#34; -e HOST_GID=&amp;#34;$(id -g)&amp;#34;\
 -p 8080:8080 -p 5901:5901 \
 -h neurodesktop-20220813 vnmd/neurodesktop:20220813 --vnc&lt;/code>&lt;/pre>
-&lt;p>Open a VNC Client and connect to port 5901&lt;/p></description></item><item><title>Docs: MacOS</title><link>https://www.neurodesk.org/docs/neurodesktop/getting-started/mac/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.neurodesk.org/docs/neurodesktop/getting-started/mac/</guid><description>
+&lt;p>Install the Tiger VNC client&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>sudo apt install tigervnc-client
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Run the VNC Client and connect to &lt;code>localhost::5901&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://www.neurodesk.org/neurodesktop/getting-started/vnc/tigervncclient.png" alt="tigervncclient" title="tigervncclient">&lt;/p>
+&lt;p>Enter &lt;code>password&lt;/code> and click Ok.&lt;/p>
+&lt;p>&lt;img src="https://www.neurodesk.org/neurodesktop/getting-started/vnc/tigervncclient-password.png" alt="tigervncclient-password" title="tigervncclient-password">&lt;/p></description></item><item><title>Docs: MacOS</title><link>https://www.neurodesk.org/docs/neurodesktop/getting-started/mac/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.neurodesk.org/docs/neurodesktop/getting-started/mac/</guid><description>
 &lt;h2 id="minimum-system-requirements">Minimum System Requirements&lt;/h2>
 &lt;ol>
 &lt;li>At least 3GB free space for neurodesktop base image&lt;/li>
@@ -595,7 +600,11 @@ Needs testing
 &lt;pre class="language-batch command-line" data-prompt=">">
 &lt;code>docker run --shm-size=1gb -it --privileged --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 5901:5901 -p 8080:8080 -h neurodesktop-20220813 vnmd/neurodesktop:20220813 --vnc &lt;/code>
 &lt;/pre>
-&lt;p>Open a VNC Client and connect to port 5901&lt;/p></description></item><item><title>Docs: HPC</title><link>https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/</guid><description>
+&lt;p>Download the Tiger VNC client (&lt;code>vncviewer64-1.12.0.exe&lt;/code>) from &lt;a href="https://sourceforge.net/projects/tigervnc/files/stable/1.12.0/">https://sourceforge.net/projects/tigervnc/files/stable/1.12.0/&lt;/a>&lt;/p>
+&lt;p>Run the VNC Client and connect to &lt;code>localhost::5901&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://www.neurodesk.org/neurodesktop/getting-started/vnc/tigervncclient.png" alt="tigervncclient" title="tigervncclient">&lt;/p>
+&lt;p>Enter &lt;code>password&lt;/code> and click Ok.&lt;/p>
+&lt;p>&lt;img src="https://www.neurodesk.org/neurodesktop/getting-started/vnc/tigervncclient-password.png" alt="tigervncclient-password" title="tigervncclient-password">&lt;/p></description></item><item><title>Docs: HPC</title><link>https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.neurodesk.org/docs/neurodesktop/getting-started/hpc/</guid><description>
 &lt;p>One way of running this project on HPCs is via &lt;a href="https://www.neurodesk.org/docs/neurocommand/getting-started/linux/">https://www.neurodesk.org/docs/neurocommand/getting-started/linux/&lt;/a>&lt;/p></description></item><item><title>Docs: Nectar Virtual Desktop Service</title><link>https://www.neurodesk.org/docs/neurodesktop/getting-started/nectar/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.neurodesk.org/docs/neurodesktop/getting-started/nectar/</guid><description>
 &lt;p>This option is only available to Australian researchers.&lt;/p>
 &lt;p>Go to &lt;a href="https://desktop.rc.nectar.org.au/">https://desktop.rc.nectar.org.au/&lt;/a>&lt;/p>
@@ -905,9 +914,15 @@ Needs testing
 --shm-size=1gb -it --privileged --name neurodesktop \
 -v ~/neurodesktop-storage:/neurodesktop-storage \
 -e HOST_UID=&amp;#34;$(id -u)&amp;#34; -e HOST_GID=&amp;#34;$(id -g)&amp;#34;\
--p 8080:8080 -p 5901:5901 \
+-p 8080:8080 --network host \
 -h neurodesktop-20220813 vnmd/neurodesktop:20220813 --vnc&lt;/code>&lt;/pre>
-&lt;p>Open a VNC Client and connect to port 5901&lt;/p></description></item><item><title>Docs: Troubleshooting</title><link>https://www.neurodesk.org/docs/neurodesktop/troubleshooting/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.neurodesk.org/docs/neurodesktop/troubleshooting/</guid><description>
+&lt;p>Download the Tiger VNC client from &lt;a href="https://sourceforge.net/projects/tigervnc/files/stable/1.12.0/">https://sourceforge.net/projects/tigervnc/files/stable/1.12.0/&lt;/a>&lt;/p>
+&lt;p>Open an SSH connection to your cloud instance with the following command&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>ssh -L 5901:127.0.0.1:5901 USER@IP
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Run the VNC Client and connect to &lt;code>localhost::5901&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://www.neurodesk.org/neurodesktop/getting-started/vnc/tigervncclient.png" alt="tigervncclient" title="tigervncclient">&lt;/p>
+&lt;p>Enter &lt;code>password&lt;/code> and click Ok.&lt;/p>
+&lt;p>&lt;img src="https://www.neurodesk.org/neurodesktop/getting-started/vnc/tigervncclient-password.png" alt="tigervncclient-password" title="tigervncclient-password">&lt;/p></description></item><item><title>Docs: Troubleshooting</title><link>https://www.neurodesk.org/docs/neurodesktop/troubleshooting/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.neurodesk.org/docs/neurodesktop/troubleshooting/</guid><description>
 &lt;p>Neurodesk is an open-source project that is always evolving. If you are experiencing an issue not listed here, please open a &lt;a href="https://github.com/NeuroDesk/neurodesk.github.io/issues">new issue&lt;/a>, so that we can aim to solve it and update our help documentation.&lt;/p>
 &lt;p>To ask questions or suggest new features, &lt;a href="https://github.com/NeuroDesk/neurodesk.github.io/discussions">join the discussion&lt;/a> on github.&lt;/p>
 &lt;h2 id="i-cannot-copy-and-paste-text-within-neurodesktop-using-keyboard-shortcuts">I cannot copy and paste text within Neurodesktop using keyboard shortcuts&lt;/h2>
