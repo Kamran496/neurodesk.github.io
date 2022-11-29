@@ -6,7 +6,7 @@
 &lt;li>Summarize the main changes and copy this to the Release History: &lt;a href="https://www.neurodesk.org/docs/neurodesktop/release-history/">https://www.neurodesk.org/docs/neurodesktop/release-history/&lt;/a>&lt;/li>
 &lt;li>Change the version of the latest desktop in &lt;a href="https://github.com/NeuroDesk/neurodesk.github.io/blob/hugo-docsy/data/neurodesktop.toml">https://github.com/NeuroDesk/neurodesk.github.io/blob/hugo-docsy/data/neurodesktop.toml&lt;/a>&lt;/li>
 &lt;li>Commit all changes&lt;/li>
-&lt;li>Tweet a quick summary of the changes and announce new version: &lt;a href="https://twitter.com/neuro_desk">https://twitter.com/neuro_desk&lt;/a>&lt;/li>
+&lt;li>Tweet a quick summary of the changes and announce new version: &lt;a href="https://masto.ai/@Neurodesk">https://masto.ai/@Neurodesk&lt;/a>&lt;/li>
 &lt;/ol></description></item><item><title>Developers: Neurodesk Architecture</title><link>https://www.neurodesk.org/developers/architecture/neurodesk-components/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.neurodesk.org/developers/architecture/neurodesk-components/</guid><description>
 &lt;h1 id="layers">Layers&lt;/h1>
 &lt;p>Neurodesktop: &lt;a href="https://github.com/NeuroDesk/neurodesktop">https://github.com/NeuroDesk/neurodesktop&lt;/a>&lt;/p>
