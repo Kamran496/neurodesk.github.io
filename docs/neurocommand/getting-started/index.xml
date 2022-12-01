@@ -24,8 +24,9 @@
 &lt;li>Run &lt;code>pip3 install -r neurodesk/requirements.txt --user&lt;/code> to install pre-requisite python packages&lt;/li>
 &lt;li>Run &lt;code>bash build.sh --cli&lt;/code> to install in cli mode&lt;/li>
 &lt;li>Run &lt;code>bash containers.sh&lt;/code> for installing indiviual containers or &lt;code>bash containers.sh --all&lt;/code> for installing all containers&lt;/li>
-&lt;li>Run &lt;code>module use $PWD/local/containers/modules/&lt;/code> to add the containers to your module search path. Add this to your .bashrc if working.&lt;/li>
+&lt;li>Run &lt;code>module use $PWD/local/containers/modules/&lt;/code> to add the containers to your module search path. Add this to your .bashrc if working. When adding to your .bashrc you will need to replace $PWD to point to the correct path, i.e. &lt;code>module use ~/neurocommand/local/containers/modules/&lt;/code>.&lt;/li>
 &lt;li>Run &lt;code>ml avail&lt;/code> to see the installed containers at the top of the list (neurodesk containers will take preference over system modules with the same name). - If a container is not yet there run &lt;code>ml --ignore_cache avail&lt;/code>&lt;/li>
+&lt;li>Every time you start a new shell you will need to run &lt;code>conda activate neurocommand&lt;/code>. Unless you added it to your .bashrc, you will also need to run &lt;code>module use PathToYourContainers&lt;/code>.&lt;/li>
 &lt;/ul>
 &lt;h3 id="for-lxde-desktops">For Lxde desktops&lt;/h3>
 &lt;p>If running on an lxde desktop&amp;hellip;
@@ -44,8 +45,11 @@ deskdir: Location for the .directory files for this linux desktop (Typically /us
 &lt;em>Removes symlinks&lt;/em>&lt;/p>
 &lt;h2 id="to-update">To update&lt;/h2>
 &lt;p>Run &lt;code>git pull&lt;/code>&lt;br>
-Run &lt;code>bash build.sh&lt;/code>&lt;br>
-&lt;em>install.sh does not need to be run again&lt;/em>&lt;/p>
+Run &lt;code>bash build.sh&lt;/code> # this updates the neurocommand but not the modules
+&lt;em>install.sh does not need to be run again&lt;/em>
+to update containers go into the neurodesktop directory and run &lt;code>bash containers.sh&lt;/code>
+Choose the module you want to update for example you want to update mrtrix3/3.0.2 module with the eddy_cuda fix:
+&lt;code>~/neurocommand/local/fetch_containers.sh mrtrix3 3.0.2 20221108 mrview $@&lt;/code>&lt;/p>
 &lt;h3 id="to-download-all-containers">To download all containers&lt;/h3>
 &lt;p>Run &lt;code>bash containers.sh --all&lt;/code>&lt;/p></description></item><item><title>Docs: Windows</title><link>https://www.neurodesk.org/docs/neurocommand/getting-started/windows/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.neurodesk.org/docs/neurocommand/getting-started/windows/</guid><description>
 &lt;h2 id="wsl-w-ubuntu--lxde">WSL (w/ Ubuntu + LXDE)&lt;/h2>
