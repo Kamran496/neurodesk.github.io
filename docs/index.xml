@@ -1374,25 +1374,30 @@ docker&lt;/p>
 &lt;thead>
 &lt;tr>
 &lt;th>Location&lt;/th>
-&lt;th>Neurodesk Play link&lt;/th>
+&lt;th>Neurodesktop on play&lt;/th>
+&lt;th>Binder on play&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
 &lt;td>Australia East&lt;/td>
-&lt;td>&lt;a href="https://play-sydney.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop">https://play-sydney.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://play-sydney.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop">neurodesktop&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://play-sydney.neurodesk.org">binder&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>US West&lt;/td>
-&lt;td>&lt;a href="https://play-phoenix.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop">https://play-phoenix.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://play-phoenix.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop">neurodesktop&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://play-phoenix.neurodesk.org">binder&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>US East&lt;/td>
-&lt;td>&lt;a href="https://play-ashburn.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop">https://play-ashburn.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://play-ashburn.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop">neurodesktop&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://play-ashburn.neurodesk.org">binder&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Germany Central&lt;/td>
-&lt;td>&lt;a href="https://play-frankfurt.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop">https://play-frankfurt.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://play-frankfurt.neurodesk.org/v2/gh/neurodesk/jupyter-neurodesktop-image/main?urlpath=neurodesktop">neurodesktop&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://play-frankfurt.neurodesk.org">binder&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
