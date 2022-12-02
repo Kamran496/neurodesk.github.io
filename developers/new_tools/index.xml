@@ -582,6 +582,7 @@ Modify &lt;code>build.sh&lt;/code> in &lt;code>neurocontainers/recipes/NEWAPP&lt
 &lt;li>
 &lt;p>Building containers&lt;/p>
 &lt;p>Any NEWAPP under the &lt;code>recipes/&lt;/code> directory are built and pushed automatically via github actions&lt;/p>
+&lt;!--
 &lt;div class="alert alert-warning" role="alert">
 &lt;h4 class="alert-heading">Depreciation notice&lt;/h4>
 &lt;p>&lt;code>./update-builder.sh&lt;/code> and &lt;code>.github/workflows/free-up-space-list.txt&lt;/code> are now deprecated. Files are now placeholders and will be removed in a future update.&lt;/p>
@@ -590,14 +591,12 @@ Modify &lt;code>build.sh&lt;/code> in &lt;code>neurocontainers/recipes/NEWAPP&lt
 &lt;li>For free-up-space process, use &lt;code>freeUpSpace: true&lt;/code> in &lt;code>build-config.json&lt;/code> (see below)&lt;/li>
 &lt;/ul>
 &lt;/div>
-&lt;p>Apps are built using the following settings:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>autoBuild: true&lt;/code>&lt;/li>
-&lt;li>&lt;code>freeUpSpace: false&lt;/code>&lt;/li>
-&lt;li>&lt;code>selfHostedRunner: false&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;p>This default behaviour can be overriden on an app-by-app bases using entries in &lt;code>.github/workflows/build-config.json&lt;/code>&lt;/p>
-&lt;p>For example:&lt;/p>
+Apps are built using the following settings:
+- `autoBuild: true`
+- `freeUpSpace: false`
+- `selfHostedRunner: false`
+This default behaviour can be overriden on an app-by-app bases using entries in `.github/workflows/build-config.json`
+For example:
 &lt;pre class="language-json">
 &lt;code>{
 "template": {
@@ -611,7 +610,7 @@ Modify &lt;code>build.sh&lt;/code> in &lt;code>neurocontainers/recipes/NEWAPP&lt
 "selfHostedRunner": false
 },
 }&lt;/code>
-&lt;/pre>
+&lt;/pre> -->
 &lt;/li>
 &lt;li>
 &lt;p>Build and test the container locally&lt;/p>
